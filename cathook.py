@@ -18,13 +18,13 @@ def on_press(key):
         if two_keys == 84: #long press in ms
             key_col.append(two_keys)
             if len(key_col) == 10: #up the sensitivity here if you hold down the backspace a lot
-                print("you are not likely not human", two_keys)
+                print("you are not human", two_keys)
                 os.system(suspend) #hacky but it will work on Mac!
                 key_col =[]
         if two_keys < 10:
             key_col.append(two_keys)
             if len(key_col) < 4:
-                print("you are likely not human", two_keys)
+                print("you are not human", two_keys)
                 os.system(suspend)
         freq = []
 with Listener(on_press=on_press) as listener:
